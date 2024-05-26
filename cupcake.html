@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background GIF and Music</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Inter", sans-serif;
+      font-size: 48px;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      text-align: center;
+      outline: 2px solid black;
+      padding: 10px;
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script>
+function PlayMusic() {
+
+  var play=document.getElementById("music");
+  play.play();
+}
+
+$(document).ready(function(){
+  setTimeout(PlayMusic,3000);
+})
+
+</script>
+</head>
+<body>
+  <img src="https://media.discordapp.net/attachments/939553319750344747/1022249367660408852/attachment.gif?ex=66544a29&is=6652f8a9&hm=cc5fad8e6220ce917f615e3f11cec55d70e86d5fc05ff59a72a63fbecace6c99&" class="background-image" alt="Background GIF">
+  <div class="text">
+    Cupcakes Now on Sale at <a href="https://ativan.lol" style="color: white; text-decoration: none;">ativan.lol</a> for $5.99
+  </div>
+  <audio controls id="music" >
+  <source src="https://www.myinstants.com/media/sounds/edp-cupcake-audiotrimmer.mp3" type="audio/mpeg">
+  </audio>
+
+  <iframe width="110" height="200" src="https://www.myinstants.com/instant/edp-cupcake-64532/embed/" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>
